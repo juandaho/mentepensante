@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+.grid-container {
+
+    display: grid;
+    grid-template-areas:
+        "navegacion"
+        "header"
+        "main"
+        "main_item"
+        "footer";
+
+}
+
+.encabezado {
+    grid-area: header;
+    background: url(../asset/mente.png) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+
+
+}
+
+.navegacion {
+
+    grid-area: navegacion;
+    background-color: #23316d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+nav ul {
+
+    text-align: right;
+
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.navegacion ul li {
+    display: inline-block;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in;
+   font-weight: lighter;
+
+}
+
+li:hover {
+
+    background-color: #53b7f9;
+
+}
+
+
+.main {
+
+    grid-area: main;
+    display: flex;
+    color: #0e2243;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.titulo_ppal {
+
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+.main_item {
+
+    grid-area: main_item;
+    background-color: #f2f2f2;
+}
+
+
+ /* .main_item img
+{
+    height: 200px;
+    width: 200px;
+
+} */
+
+
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+
+
+    
+}
+
+.card:hover {
+
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.card img {
+
+    width: 150px;
+    height: 150px;
+
+}
+
+.card h4 {
+
+    font-weight: 50;
+
+} 
+
+
+
+.footer {
+
+    grid-area: footer;
+    background-color: #283368;
+    font-style: bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: white;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+
+}
+
+/* Vista Movil */
+@media (min-width: 600px) {
+
+    .grid-container {
+        grid-template:
+
+            "navegacion" 10px
+            "main" 70px 
+            "main_item" 200px
+            "footer" 1fr
+    }
+
+}
+
+/* Vista Desktop */
+@media (min-width: 900px) {
+
+    .grid-container {
+        grid-template:
+            "navegacion" 10px
+            "header" 498px
+             "main" 40px 
+             "main_item" 300px
+            "footer" 1fr
+    }
+}
