@@ -6,6 +6,8 @@
 }
 
 
+/* Creación de Grid de acuerdo al contenido de la página */
+
 .grid-container {
 
     display: grid;
@@ -18,6 +20,7 @@
 
 }
 
+/* Grid Encabezado  */
 .encabezado {
     grid-area: header;
     background: url(../asset/mente.png) no-repeat center center fixed;
@@ -27,6 +30,8 @@
 
 }
 
+
+/* Grid Menu de Navegación  */
 .navegacion {
 
     grid-area: navegacion;
@@ -71,6 +76,7 @@ li:hover {
 
 }
 
+/* Grid Main  */
 
 .main {
 
@@ -91,7 +97,7 @@ li:hover {
 }
 
 
-
+/* Grid Items - Información que cambia de acuerdo a la página  */
 .main_item {
 
     grid-area: main_item;
@@ -99,14 +105,7 @@ li:hover {
 }
 
 
- /* .main_item img
-{
-    height: 200px;
-    width: 200px;
-
-} */
-
-
+/* Imagenes con animaciones  */
 .card {
     width: 200px;
     height: 200px;
@@ -142,7 +141,7 @@ li:hover {
 } 
 
 
-
+/* Grid: Pie de página  */
 .footer {
 
     grid-area: footer;
@@ -160,6 +159,7 @@ li:hover {
 
 }
 
+/* Pie de página con animaciones  */
 .footer .social a {
     font-size: 24px;
     color: white;
@@ -180,7 +180,7 @@ li:hover {
 
 }
 
-/* Vista Movil */
+/* Media Queries - Vista Movil */
 @media (min-width: 600px) {
 
     .grid-container {
@@ -194,7 +194,7 @@ li:hover {
 
 }
 
-/* Vista Desktop */
+/* Media Queries - Vista Desktop */
 @media (min-width: 900px) {
 
     .grid-container {
