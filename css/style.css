@@ -30,6 +30,12 @@
 
 }
 
+.encabezado img
+{
+
+    width: 15%;
+}
+
 
 /* Grid Menu de Navegación  */
 .navegacion {
@@ -92,7 +98,7 @@ li:hover {
 .titulo_ppal {
 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 120%;
 
 }
 
@@ -101,19 +107,21 @@ li:hover {
 .main_item {
 
     grid-area: main_item;
+    grid-template-rows: auto;
     background-color: #f2f2f2;
+
 }
 
 
 /* Imagenes con animaciones  */
 .card {
-    width: 200px;
-    height: 200px;
+    width: 65%;
+    height: 65%;
     border-radius: 8px;
-    box-shadow: 0 2px 2 px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: all 0.25s;
+     
 
 
     
@@ -127,16 +135,11 @@ li:hover {
 
 }
 
-.card img {
 
-    width: 150px;
-    height: 150px;
-
-}
 
 .card h4 {
 
-    font-weight: 50;
+    font-weight: 10%;
 
 } 
 
@@ -181,15 +184,17 @@ li:hover {
 }
 
 /* Media Queries - Vista Movil */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
 
     .grid-container {
-        grid-template:
+        
+          grid-template:
 
-            "navegacion" 10px
-            "main" 70px 
-            "main_item" 200px
-            "footer" 1fr
+          "navegacion" 4%
+          "main" 20% 
+           "main_item" 35%
+          "footer" 1fr
+
     }
 
 }
@@ -199,10 +204,10 @@ li:hover {
 
     .grid-container {
         grid-template:
-            "navegacion" 10px
-            "header" 498px
-             "main" 40px 
-             "main_item" 300px
+            "navegacion" 4%
+            "header" 50%
+             "main" 10% 
+             "main_item" 35%
             "footer" 1fr
     }
 }
